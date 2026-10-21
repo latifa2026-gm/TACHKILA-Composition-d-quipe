@@ -8,7 +8,7 @@
     height: 50%;
     border: 1px solid rgb(31, 215, 74);
     display: grid;
-    gap: 1px;
+    gap: 3px;
     background-color:green;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(9,1fr);
@@ -79,9 +79,7 @@
     border: 2px dashed blue   
 }
 .form{
-    background-color: rgb(101, 138, 170);
-    margin: 100px;
-    border: 1px solid white;
+    
     
 }
 
