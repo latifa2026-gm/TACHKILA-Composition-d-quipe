@@ -1,52 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tachkila | Composition d'équipe - Atlas FC</title>
     <link rel="stylesheet" href="style.css">
- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body class="text-white flex">
     <header class="bg-sky-800 fixed  top-0 left-0 z-50  flex h-10 w-full items-center justify-between col-span-full">
         <!-- logo qui se trouve dans le header  -->
-          <div  class="flex ">
-           <img src="ballon.jpg" alt="football image logo" class="w-5 md:w-6 lg:w-5  mt-1 rounded-full" >
-           <h1 class="font-bold mt-1 ">TACHKILA</h1>
-          </div>
-          <div >
+        <div class="flex ">
+            <img src="ballon.jpg" alt="football image logo" class="w-5 md:w-6 lg:w-5  mt-1 rounded-full">
+            <h1 class="font-bold mt-1 ">TACHKILA</h1>
+        </div>
+        <div>
             <ul class="flex gap-6 ">
                 <li class="list-disc marker:text-orange-600  text-orange-600">GB</li>
                 <li class="list-disc marker:text-sky-400  text-sky-400">DEF</li>
                 <li class="list-disc marker:text-green-500  text-green-500">MIL</li>
                 <li class="list-disc marker:text-red-700  text-red-900 ">ATT</li>
             </ul>
-          </div>
-          <div class="flex gap-4 ">
-            <span >Schéma</span>
-            <span  >4-4-2</span>
-          </div>
-          
-          
+        </div>
+        <div class="flex gap-4 ">
+            <span>Schéma</span>
+            <span>4-4-2</span>
+        </div>
+
+
 
     </header>
-    <aside class="flex min-h-screen bg-gray-400 pt-12 min-h-screen  w-full max-w-[20%] flex-col rounded-xl  p-2 " >
-         <button class="bg-green-600 rounded-full">+Ajouter un joueur </button>
-    </aside>
-    <main class="min-w-0 flex-1 bg-green-600" id="contenu-principale" >
-        <div id="terrain">
-            <div class="box-gardien"><span>GB</span><span></span></div>
-            <div class="DEF"><span>DG</span><span>Libre</span></div>
-            <div class="DEF"><span>DC</span><span>Libre</span></div>
-            <div class="DEF"><span>DC</span><span>Libre</span></div>
-            <div class="DEF"><span>DD</span><span>Libre</span></div>
-            <div class="MIL"><span>MG</span><span>Libre</span></div>
-            <div class="MIL"><span>MC</span><span>Libre</span></div>
-            <div class="MIL"><span>MC</span><span>Libre</span></div>
-            <div class="MIL"><span>MD</span><span>Libre</span></div>
-            <div class="ATT"><span>BU</span><span>Libre</span></div>
-            <div class="ATT"><span>BU</span><span>Libre</span></div>
+    <aside class="flex min-h-screen bg-gray-400 pt-12 min-h-screen  w-full max-w-[20%] flex-col rounded-xl  p-2 ">
+        <button class="bg-green-600 rounded-full " id="btn_ajouter">+Ajouter un joueur </button>
+        <div class="flex justify-between mt-2">
+            <p class="text-bold">Effectif</p>
+            <button class="bg-orange-600 rounded-full ">0 joueur</button>
         </div>
+        <p>Cliquer sur un joueur place pour voir sa case sur le terrain. pour modifier , pour supprimer </p>
+        <div class="bg-violet-950">Aucun joueur pour le moment.</div>
+    </aside>
+    <main class="min-w-0 flex-1 bg-green-600" id="contenu-principale">
+        <div id="terrain">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="GB">GB</div>
+            <div class="box5"></div>
+            <div class="box6"></div>
+            <div class="box7"></div>
+            <div class="box8"></div>
+            <div class="box9"></div>
+            <div class="box10"></div>
+            <div class="box11"></div>
+            <div class="box12"></div>
+            <div class="box13"></div>
+            <div class="box14"></div>
+            <div class="box15"></div>
+            <div class="box16"></div>
+            <div class="box17">DG</div>
+            <div class="box18"></div>
+            <div class="box19"></div>
+            <div class="box20">MG</div>
+            <div class="box21"></div>
+            <div class="box22"></div>
+            <div class="box23"></div>
+            <div class="box24"></div>
+            <div class="box25"></div>
+            <div class="box26"></div>
+            <div class="box27"></div>
+            <div class="box28"></div>
+            <div class="box29"></div>
+            <div class="box30"></div>
+            <div class="box31"></div>
+            <div class="box32"></div>
+            <div class="box33"></div>
+            <div class="box34"></div>
+            <div class="box35"></div>
+            <div class="box36">DC</div>
+            <div class="box37"></div>
+            <div class="box38"></div>
+            <div class="box39">MC</div>
+            <div class="box40"></div>
+            <div class="box41"></div>
+            <div class="box42"></div>
+            <div class="box43"></div>
+            <div class="box44"></div>
+            <div class="box45"></div>
+            <div class="box46"></div>
+            <div class="box47"></div>
+            <div class="box48"></div>
+            <div class="box49"></div>
+            <div class="box50"></div>
+            <div class="box51"></div>
+            <div class="box52"></div>
+            <div class="box53"></div>
+            <div class="box54"></div>
+            <div class="box55">DC</div>
+            <div class="box56"></div>
+            <div class="box57"></div>
+            <div class="box58">MC</div>
+            <div class="box59"></div>
+            <div class="box60"></div>
+            <div class="box61"></div>
+            <div class="box62"></div>
+            <div class="box63"></div>
+            <div class="box64"></div>
+            <div class="box65"></div>
+            <div class="box66"></div>
+            <div class="box67"></div>
+            <div class="box68"></div>
+            <div class="box69"></div>
+            <div class="box70">BU</div>
+            <div class="box71"></div>
+            <div class="box72">BU</div>
+            <div class="box73"></div>
+            <div class="box74"></div>
+            <div class="box75"></div>
+            <div class="box76"></div>
+            <div class="box77">DD</div>
+            <div class="box78"></div>
+            <div class="box79">MD</div>
+            <div class="box80"></div>
+            <div class="box81"></div>
+            <div class="box82"></div>
+            <div class="box83"></div>
+            <div class="box84"></div>
+            <div class="box85"></div>
+            <div class="box86"></div>
+            <div class="box87"></div>
+            <div class="box88"></div>
+            <div class="box89"></div>
+            <div class="box90"></div>
+            <div class="box91"></div>
+            <div class="box92"></div>
+            <div class="box93"></div>
+        </div>
+        
+            
+                <form action="" id="form" class="fixed ">
+                      <p>Ajouter un joueur</p>
+                      <label for="Nom">Nom complet</label>
+                      <input type="text" placeholder="Ex.Ayoub Mansouri">
+                      <label >Poste</label>
+                      <div>
+                        <li >Gardien</li>
+                      </div>
+                      <div>
+                        <li>Defenseur</li>
+                      </div>
+                      <div>
+                        <li>Milieu</li>
+                      </div>
+                      <div>
+                        <li>Attaquant</li>
+                      </div>
+                      <label for="Num">Numero (1 q 99)</label>
+                      <input type="text" id="Num" placeholder="Ex. 7">
+                    <button type="reset">Annuler</button>
+                    <button type="reset">Ajouter</button>
+                    
+                 </form>
+            
     </main>
 </body>
+
 </html>
