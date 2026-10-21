@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tachkila — Composition d'équipe</title>
+    <title>Tachkila | Composition d'équipe - Atlas FC</title>
+    <link rel="stylesheet" href="style.css">
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    
+<body class="text-white flex">
+    <header class="bg-sky-800 fixed  top-0 left-0 z-50  flex h-10 w-full items-center justify-between col-span-full">
+        <!-- logo qui se trouve dans le header  -->
+          <div  class="flex ">
+           <img src="ballon.jpg" alt="football image logo" class="w-5 md:w-6 lg:w-5  mt-1 rounded-full" >
+           <h1 class="font-bold mt-1 ">TACHKILA</h1>
+          </div>
+          <div >
+            <ul class="flex gap-6 ">
+                <li class="list-disc marker:text-orange-600  text-orange-600">GB</li>
+                <li class="list-disc marker:text-sky-400  text-sky-400">DEF</li>
+                <li class="list-disc marker:text-green-500  text-green-500">MIL</li>
+                <li class="list-disc marker:text-red-700  text-red-900 ">ATT</li>
+            </ul>
+          </div>
+          <div class="flex gap-4 ">
+            <span >Schéma</span>
+            <span  >4-4-2</span>
+          </div>
+          
+          
+
+    </header>
+    <aside class="flex min-h-screen bg-gray-400 pt-12 min-h-screen  w-full max-w-[20%] flex-col rounded-xl  p-2 " >
+         <button class="bg-green-600 rounded-full">+Ajouter un joueur </button>
+    </aside>
+    <main class="min-w-0 flex-1 bg-green-600" id="contenu-principale" >
+        <div id="terrain">
+            <div class="box-gardien"><span>GB</span><span></span></div>
+            <div class="DEF"><span>DG</span><span>Libre</span></div>
+            <div class="DEF"><span>DC</span><span>Libre</span></div>
+            <div class="DEF"><span>DC</span><span>Libre</span></div>
+            <div class="DEF"><span>DD</span><span>Libre</span></div>
+            <div class="MIL"><span>MG</span><span>Libre</span></div>
+            <div class="MIL"><span>MC</span><span>Libre</span></div>
+            <div class="MIL"><span>MC</span><span>Libre</span></div>
+            <div class="MIL"><span>MD</span><span>Libre</span></div>
+            <div class="ATT"><span>BU</span><span>Libre</span></div>
+            <div class="ATT"><span>BU</span><span>Libre</span></div>
+        </div>
+    </main>
 </body>
 </html>
