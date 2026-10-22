@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="script.js" defer></script>
 </head>
-
 <body class="text-white flex">
     <header class="bg-sky-800 fixed  top-0 left-0 z-50  flex h-10 w-full items-center justify-between col-span-full">
         <!-- logo qui se trouve dans le header  -->
@@ -29,9 +27,6 @@
             <span>Schéma</span>
             <span>4-4-2</span>
         </div>
-
-
-
     </header>
     <aside class="flex min-h-screen bg-gray-400 pt-12 min-h-screen  w-full max-w-[20%] flex-col rounded-xl  p-2 ">
         <button class="bg-green-600 rounded-full " id="btn_ajouter">+Ajouter un joueur </button>
@@ -42,7 +37,7 @@
         <p>Cliquer sur un joueur place pour voir sa case sur le terrain. pour modifier , pour supprimer </p>
         <div class="bg-violet-950">Aucun joueur pour le moment.</div>
     </aside>
-    <main class="min-w-0 flex-1 bg-green-600" id="contenu-principale">
+    <main class="flex-1 bg-green-600" id="contenu-principale">
         <div id="terrain">
             <div class="box1"></div>
             <div class="box2"></div>
@@ -143,7 +138,7 @@
             class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[400px] bg-pink-500 rounded-xl p-3 hidden ">
             <div class="flex justify-between">
                 <p class="font-bold">Ajouter un joueur</p>
-                <button class="btn-fermer">X</button>
+                <button id="btn-fermer" class="bg-red-600 ">X</button>
 
             </div>
             <div>
@@ -151,7 +146,7 @@
                     <label for="Nom">Nom complet</label>
                 </p>
                 <input type="text" id="Nom" placeholder="Ex.Ayoub Mansouri"
-                    class="rounded-xl border border-black w-full bg-sky-800 ">
+                    class="rounded-xl border border-black w-full bg-sky-800 m-1 p-1">
             </div>
             <div>
                 <p>
@@ -160,24 +155,24 @@
                 <div id="the_post">
                     <div class="">
                         <div class="flex justify-between ">
-                            <label for="" class="bg-gray-400 w-50 rounded-xl mt-1">
-                                <input type="radio" id="gd" name="post">
+                            <label for="" class="bg-gray-400 w-50 rounded-xl m-1 p-1">
+                                <input type="radio" id="gd" name="post" class="has-chicked">
                                 <label for="gd">Gardien</label>
 
                             </label>
-                            <label for=" " class="bg-gray-400 w-50 rounded-xl  mt-1">
+                            <label for=" " class="bg-gray-400 w-50 rounded-xl  m-1 p-1">
                                 <input type="radio" id="df" name="post">
                                 <label for="df">Defenseur</label>
 
                             </label>
                         </div>
                         <div class="flex justify-between">
-                            <label for="" class="bg-gray-400 w-50 rounded-xl  mt-1">
+                            <label for="" class="bg-gray-400 w-50 rounded-xl  m-1 p-1">
                                 <input type="radio" id="ml" name="post">
                                 <label for="ml">Milieu</label>
 
                             </label>
-                            <label for="" class="bg-gray-400 w-50 rounded-xl  mt-1">
+                            <label for="" class="bg-gray-400 w-50 rounded-xl  m-1 p-1">
                                 <input type="radio" id="att" name="post">
                                 <label for="att">Attaquant</label>
 
@@ -189,11 +184,11 @@
                             <label for="">Numero (1 q 99)</label>
                         </p>
                         <input type="text" id="Num" placeholder="Ex. 7"
-                            class="rounded-xl border border-black w-full bg-sky-800">
+                            class="rounded-xl border border-black w-full bg-sky-800 m-1 p-1">
                     </div>
                     <div class="flex justify-center gap-4 mt-1">
-                        <button type="reset" class="bg-red-600 rounded-xl" id="ajoute">Annuler</button>
-                        <button type="button" class="bg-green-600 rounded-xl" id="annuler">Ajouter</button>
+                        <button type="reset" class="bg-red-600 rounded-xl m-1 p-1" id="ajoute">Annuler</button>
+                        <button type="button" class="bg-green-600 rounded-xl m-1 p-1" id="annuler">Ajouter</button>
                     </div>
 
 
