@@ -78,9 +78,7 @@
     grid-column: 11/13 ;
     border: 2px dashed blue   
 }
-.form{
-    
-    
+.hidden{
+    display: none;
 }
-
 

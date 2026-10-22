@@ -7,6 +7,7 @@
     <title>Tachkila | Composition d'équipe - Atlas FC</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body class="text-white flex">
@@ -137,49 +138,68 @@
             <div class="box92"></div>
             <div class="box93"></div>
         </div>
-        
-                <form action="" id="form" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[400px] bg-pink-500 rounded-xl  ">
-                    <div class="flex justify-between" >
-                        <p class="font-bold">Ajouter un joueur</p>
-                        <button class="btn-fermer" >X</button>
 
-                    </div>
-                    <div>
-                            <p>
-                               <label for="Nom">Nom complet</label>
-                            </p>
-                           <input type="text" id="Nom" placeholder="Ex.Ayoub Mansouri" class="rounded-xl border border-black w-full bg-sky-800">
+        <form action="" id="form"
+            class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[400px] bg-pink-500 rounded-xl p-3 hidden ">
+            <div class="flex justify-between">
+                <p class="font-bold">Ajouter un joueur</p>
+                <button class="btn-fermer">X</button>
+
+            </div>
+            <div>
+                <p>
+                    <label for="Nom">Nom complet</label>
+                </p>
+                <input type="text" id="Nom" placeholder="Ex.Ayoub Mansouri"
+                    class="rounded-xl border border-black w-full bg-sky-800 ">
+            </div>
+            <div>
+                <p>
+                    <label>Poste</label>
+                </p>
+                <div id="the_post">
+                    <div class="">
+                        <div class="flex justify-between ">
+                            <label for="" class="bg-gray-400 w-50 rounded-xl mt-1">
+                                <input type="radio" id="gd" name="post">
+                                <label for="gd">Gardien</label>
+
+                            </label>
+                            <label for=" " class="bg-gray-400 w-50 rounded-xl  mt-1">
+                                <input type="radio" id="df" name="post">
+                                <label for="df">Defenseur</label>
+
+                            </label>
+                        </div>
+                        <div class="flex justify-between">
+                            <label for="" class="bg-gray-400 w-50 rounded-xl  mt-1">
+                                <input type="radio" id="ml" name="post">
+                                <label for="ml">Milieu</label>
+
+                            </label>
+                            <label for="" class="bg-gray-400 w-50 rounded-xl  mt-1">
+                                <input type="radio" id="att" name="post">
+                                <label for="att">Attaquant</label>
+
+                            </label>
+                        </div>
                     </div>
                     <div>
                         <p>
-                            <label >Poste</label>
+                            <label for="">Numero (1 q 99)</label>
                         </p>
-                    <div>
-                    <div></div>
-                         <li >Gardien</li>
-                       </div>
-                       </div>
-                      
-                       <div>
-                        <li>Defenseur</li>
-                      </div>
-                      <div>
-                        <li>Milieu</li>
-                      </div>
-                      <div>
-                        <li>Attaquant</li>
-                      </div>
-                      <label for="Num">Numero (1 q 99)</label>
-                      <input type="text" id="Num" placeholder="Ex. 7">
-                      <div class="btns-box">
-                            <button type="reset">Annuler</button>
-                           <button type="reset">Ajouter</button>
-                      </div>
-                    
-                    
-                 </form>
+                        <input type="text" id="Num" placeholder="Ex. 7"
+                            class="rounded-xl border border-black w-full bg-sky-800">
+                    </div>
+                    <div class="flex justify-center gap-4 mt-1">
+                        <button type="reset" class="bg-red-600 rounded-xl" id="ajoute">Annuler</button>
+                        <button type="button" class="bg-green-600 rounded-xl" id="annuler">Ajouter</button>
+                    </div>
 
-                      
+
+        </form>
+
+
         </div>
     </main>
 </body>
