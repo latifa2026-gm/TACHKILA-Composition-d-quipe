@@ -83,3 +83,21 @@
     display: none;
 }
 
+
+/* l'annimation  */
+@keyframes highlightFlash {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 transparent;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #f59e0b;
+  }
+}
+/*  cette class ajouter par js  */
+.flash-highlight {
+  animation: highlightFlash 0.5s ease-in-out 2;
+  z-index: 20;
+}
+
