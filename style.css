@@ -4,12 +4,13 @@
     align-items: center;
 }
 #terrain{
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
     border: 1px solid rgb(31, 215, 74);
     display: grid;
     gap: 3px;
-    background-color:green;
+     /* background-image: url("terrain.png"); */
+    background-color: green;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(9,1fr);
 }
@@ -78,9 +79,25 @@
     grid-column: 11/13 ;
     border: 2px dashed blue   
 }
-.form{
-    
-    
+.hidden{
+    display: none;
 }
 
+
+/* l'annimation  */
+@keyframes highlightFlash {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 transparent;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #f59e0b;
+  }
+}
+/*  cette class ajouter par js  */
+.flash-highlight {
+  animation: highlightFlash 0.5s ease-in-out 2;
+  z-index: 20;
+}
 

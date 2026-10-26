@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tachkila | Composition d'équipe - Atlas FC</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script2.js" defer></script>
 </head>
-
 <body class="text-white flex">
     <header class="bg-sky-800 fixed  top-0 left-0 z-50  flex h-10 w-full items-center justify-between col-span-full">
         <!-- logo qui se trouve dans le header  -->
@@ -16,32 +21,33 @@
             <img src="ballon.jpg" alt="football image logo" class="w-5 md:w-6 lg:w-5  mt-1 rounded-full">
             <h1 class="font-bold mt-1 ">TACHKILA</h1>
         </div>
-        <div>
+        <nav aria-label="legende des postes">
             <ul class="flex gap-6 ">
                 <li class="list-disc marker:text-orange-600  text-orange-600">GB</li>
                 <li class="list-disc marker:text-sky-400  text-sky-400">DEF</li>
                 <li class="list-disc marker:text-green-500  text-green-500">MIL</li>
                 <li class="list-disc marker:text-red-700  text-red-900 ">ATT</li>
             </ul>
+        </nav>
+        <div class="flex items-center gap-2 text-xs bg-sky-950 px-3 py-1 rounded-full border border-sky-700">
+            <span class="text-sky-300">Schéma</span>
+            <span class="font-bold text-amber-400">4-4-2</span>
         </div>
-        <div class="flex gap-4 ">
-            <span>Schéma</span>
-            <span>4-4-2</span>
-        </div>
-
-
-
     </header>
     <aside class="flex min-h-screen bg-gray-400 pt-12 min-h-screen  w-full max-w-[20%] flex-col rounded-xl  p-2 ">
         <button class="bg-green-600 rounded-full " id="btn_ajouter">+Ajouter un joueur </button>
         <div class="flex justify-between mt-2">
             <p class="text-bold">Effectif</p>
-            <button class="bg-orange-600 rounded-full ">0 joueur</button>
+            <button class="bg-orange-600 rounded-full " id="btn-nbr-joueur">0 joueur</button>
         </div>
         <p>Cliquer sur un joueur place pour voir sa case sur le terrain. pour modifier , pour supprimer </p>
-        <div class="bg-violet-950">Aucun joueur pour le moment.</div>
+        <div id="liste-joueurs" class="flex flex-col gap-2 overflow-y-auto max-h-[calc(100vh-280px)] pr-1">
+                <div id="liste_joueurs" class="bg-slate-900/80 text-slate-300 p-3 text-xs text-center rounded-xl border border-slate-700">
+                    Aucun joueur dans l'effectif pour le moment.
+                </div>
+            </div>
     </aside>
-    <main class="min-w-0 flex-1 bg-green-600" id="contenu-principale">
+    <main class="flex-1 bg-green-600" id="contenu-principale">
         <div id="terrain">
             <div class="box1"></div>
             <div class="box2"></div>
@@ -137,49 +143,71 @@
             <div class="box92"></div>
             <div class="box93"></div>
         </div>
-        
-                <form action="" id="form" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[400px] bg-pink-500 rounded-xl  ">
-                    <div class="flex justify-between" >
-                        <p class="font-bold">Ajouter un joueur</p>
-                        <button class="btn-fermer" >X</button>
 
+        <form action="" id="form" novalidate
+            class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[400px] bg-pink-500 rounded-xl p-3 hidden ">
+            <div class="flex justify-between">
+                <p class="font-bold">Ajouter un joueur</p>
+                <button id="btn-fermer" class="bg-red-600 rounded-xl pl-1 pr-1 " aria-label="Fermer la fenêtre">X</button>
+
+            </div>
+            <div>
+                <p>
+                    <label for="Nom">Nom complet</label>
+                </p>
+                <input type="text" id="Nom" placeholder="Ex.Ayoub Mansouri"
+                    class="rounded-xl border border-black w-full bg-sky-800 m-1 p-1" class="error">
+                    <p id="eror-contenuN" class="text-amber-200 text-xs font-semibold mt-1 " class="messageeror"></p>
+            </div>
+            <div>
+                <p>
+                    <label>Poste</label>
+                </p>
+                   <div id="">
+                    <div class="the_post">
+                        <div class="flex justify-between ">
+                            <label for="" class="bg-gray-400 w-50 rounded-xl m-1 p-1">
+                                <input type="radio" id="gd" name="post" >
+                                <label for="gd">Gardien</label>
+
+                            </label>
+                            <label for="" class="bg-gray-400 w-50 rounded-xl  m-1 p-1">
+                                <input type="radio" id="df" name="post">
+                                <label for="df">Defenseur</label>
+
+                            </label>
+                        </div>
+                        <div class="flex justify-between">
+                            <label for="" class="bg-gray-400 w-50 rounded-xl  m-1 p-1">
+                                <input type="radio" id="ml" name="post">
+                                <label for="ml">Milieu</label>
+
+                            </label>
+                            <label for="" class="bg-gray-400 w-50 rounded-xl  m-1 p-1">
+                                <input type="radio" id="att" name="post">
+                                <label for="att">Attaquant</label>
+
+                            </label>
+                        </div>
                     </div>
-                    <div>
-                            <p>
-                               <label for="Nom">Nom complet</label>
-                            </p>
-                           <input type="text" id="Nom" placeholder="Ex.Ayoub Mansouri" class="rounded-xl border border-black w-full bg-sky-800">
-                    </div>
+                    <p class="post-error" claa="text-amber-200 text-xs font-semibold mt-1" class="messageeror"></p>
                     <div>
                         <p>
-                            <label >Poste</label>
+                            <label for="">Numero (1 q 99)</label>
                         </p>
-                    <div>
-                    <div></div>
-                         <li >Gardien</li>
-                       </div>
-                       </div>
-                      
-                       <div>
-                        <li>Defenseur</li>
-                      </div>
-                      <div>
-                        <li>Milieu</li>
-                      </div>
-                      <div>
-                        <li>Attaquant</li>
-                      </div>
-                      <label for="Num">Numero (1 q 99)</label>
-                      <input type="text" id="Num" placeholder="Ex. 7">
-                      <div class="btns-box">
-                            <button type="reset">Annuler</button>
-                           <button type="reset">Ajouter</button>
-                      </div>
-                    
-                    
-                 </form>
+                        <input type="number" id="Num" placeholder="Ex. 7"
+                            class="rounded-xl border border-black w-full bg-sky-800 m-1 p-1"  class="error">
+                            <p id="eror-contenu" class="text-amber-200 text-xs font-semibold mt-1" class="messageeror"></p>
+                    </div>
+                    <div class="flex justify-center gap-4 mt-1">
+                        <button type="reset" class="bg-red-600 rounded-xl m-1 p-1 hover:bg-rose-800" id="annuler">Annuler</button>
+                        <button type="submit" class="bg-green-600 rounded-xl m-1 p-1 hover:bg-emerald-600" id="Ajouter">Ajouter</button>
+                    </div>
 
-                      
+
+        </form>
+
+
         </div>
     </main>
 </body>
