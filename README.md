@@ -47,4 +47,4 @@ L'objectif de ce projet est de digitaliser la préparation des matchs d'Atlas FC
 5. **Persistance & Notifications** : Sauvegarde dans le `localStorage`, système de notifications Toast et réactivité complète sur mobile et tablette.
 
 ---
-
+**lien de presentation :** *[https://canva.link/7cp2lr6efo2s2l3]*
